@@ -239,7 +239,7 @@ function Dashboard() {
           </Col> */}
         </Row>
         <Row>
-          <Col md="7">
+          <Col md="12">
             <Card>
               <Card.Header>
                 <Card.Title as="h4">Enviromental Impact</Card.Title>
