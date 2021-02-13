@@ -1,4 +1,4 @@
-alert("Generating summary highlights. This may take up to 30 seconds depending on length of article.");
+// alert("Generating summary highlights. This may take up to 30 seconds depending on length of article.");
 
 // function unicodeToChar(text) {
 // 	return text.replace(/\\u[\dA-F]{4}/gi, 
@@ -8,13 +8,18 @@ alert("Generating summary highlights. This may take up to 30 seconds depending o
 // }
 
 // capture all text
-var textToSend = document.body.innerText;
+let fabrics = document.getElementById("feature-bullets").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].innerText;
+let dims = document.getElementById("detailBullets_feature_div").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].innerText;
 
 // summarize and send back
 const api_url = 'https://us-central1-test1-304600.cloudfunctions.net/test_firestore';
 
-alert("about to fetch");
-alert(textToSend);
+let ig = JSON.stringify(fabrics)
+let wg = JSON.stringify(dims)
+
+let pass = ig + " splitter " + wg
+alert(pass)
+// let hi = []
 
 // let response = fetch(api_url);
 
@@ -26,20 +31,21 @@ alert(textToSend);
 
 fetch(api_url, {
   method: 'POST',
-  body: JSON.stringify(textToSend),
-  headers:{
+  body: JSON.stringify(fabrics),
+  headers: {
     'Content-Type': 'application/json'
-  } })
-.then(response => {
-	alert("here1");
-	// console.log(response.json());
-	return response.json()
-	//return 'done1'
+  }
 })
-.then(res => {
-	alert("here2")
-	console.log(res)
-})
+  .then(response => {
+    alert("here1");
+    // console.log(response.json());
+    return response.json()
+    //return 'done1'
+  })
+  .then(res => {
+    alert("here2")
+    console.log(res)
+  })
 // .then(data => {
 // 	alert(data.json());
 // 	return 'done2'
