@@ -1,0 +1,32 @@
+body {
+	width: 200px; 
+	overflow:hidden;
+}
+
+button {
+     background:none!important;
+     color:inherit;
+     border:indianred; 
+     font: inherit;
+     padding: 2;
+     margin: 2;
+     cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:none;
+  color: white;
+  cursor: pointer;
+}
