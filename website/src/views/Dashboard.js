@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ChartistGraph from "react-chartist";
 // react-bootstrap components
 import {
@@ -17,6 +17,33 @@ import {
 } from "react-bootstrap";
 
 function Dashboard() {
+  const [userData, setUserData] = useState({});
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch("https://us-central1-test1-304600.cloudfunctions.net/userdata");
+      res
+      .json()
+      .then( res => {setUserData(res)});
+    }
+
+    fetchData();
+  }, []);
+
+  const [chartData, setChartData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch("https://us-central1-test1-304600.cloudfunctions.net/chartdata");
+      res
+      .json()
+      .then( res => {setChartData(res)});
+    }
+
+    fetchData();
+  }, []);
+
+
   return (
     <>
       <Container fluid>
@@ -33,7 +60,7 @@ function Dashboard() {
                   <Col xs="7">
                     <div className="numbers">
                       <p className="card-category">Water Waste</p>
-                      <Card.Title as="h4">150L</Card.Title>
+                      <Card.Title as="h4">{userData.WaterUsage}L</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -59,7 +86,7 @@ function Dashboard() {
                   <Col xs="7">
                     <div className="numbers">
                       <p className="card-category">CO2 Emission</p>
-                      <Card.Title as="h4">345L</Card.Title>
+                      <Card.Title as="h4">{userData.CarbonEmission}L</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -85,7 +112,7 @@ function Dashboard() {
                   <Col xs="7">
                     <div className="numbers">
                       <p className="card-category">Land Use</p>
-                      <Card.Title as="h4">23 Acres</Card.Title>
+                      <Card.Title as="h4">{userData.LandUsage} Acres</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -111,7 +138,7 @@ function Dashboard() {
                   <Col xs="7">
                     <div className="numbers">
                       <p className="card-category">Methane Emission</p>
-                      <Card.Title as="h4">23L</Card.Title>
+                      <Card.Title as="h4">{userData.MethaneEmission}L</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -138,19 +165,16 @@ function Dashboard() {
                   <ChartistGraph
                     data={{
                       labels: [
-                        "9:00AM",
-                        "12:00AM",
-                        "3:00PM",
-                        "6:00PM",
-                        "9:00PM",
-                        "12:00PM",
-                        "3:00AM",
-                        "6:00AM",
+                        "week1",
+                        "week2",
+                        "week3",
+                        "week4"
                       ],
                       series: [
-                        [287, 385, 490, 492, 554, 586, 698, 695],
-                        [67, 152, 143, 240, 287, 335, 435, 437],
-                        [23, 113, 67, 108, 190, 239, 307, 308],
+                        chartData.map(data => data.CarbonEmission),
+                        chartData.map(data => data.LandUsage),
+                        chartData.map(data => data.MethanEmission),
+                        chartData.map(data => data.WaterUsage)
                       ],
                     }}
                     type="Line"
@@ -188,13 +212,13 @@ function Dashboard() {
               <Card.Footer>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Water Waste
+                  CarbonEmission
                   <i className="fas fa-circle text-danger"></i>
-                  CO2 Emission
+                  LandUsage
                   <i className="fas fa-circle text-warning"></i>
-                  Land Use
-                  <i className="fas fa-circle "></i>
-                  Methane Emission
+                  MethanEmission
+                  <i className="fas fa-circle text-primary"></i>
+                  WaterUsage
                 </div>
                 <hr></hr>
                 <div className="stats">
@@ -367,7 +391,7 @@ function Dashboard() {
           </Col>
         </Row>
         {/* <Row>
-          
+
         </Row> */}
       </Container>
     </>
