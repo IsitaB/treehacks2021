@@ -1,29 +1,43 @@
 alert("Generating summary highlights. This may take up to 30 seconds depending on length of article.");
 
-function unicodeToChar(text) {
-	return text.replace(/\\u[\dA-F]{4}/gi, 
-	      function (match) {
-	           return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
-	      });
-}
+// function unicodeToChar(text) {
+// 	return text.replace(/\\u[\dA-F]{4}/gi, 
+// 	      function (match) {
+// 	           return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
+// 	      });
+// }
 
 // capture all text
 var textToSend = document.body.innerText;
 
 // summarize and send back
-const api_url = 'https://us-central1-test1-304600.cloudfunctions.net/generate_summary';
+const api_url = 'https://us-central1-test1-304600.cloudfunctions.net/test_firestore';
 
 alert("about to fetch");
 alert(textToSend);
 
-fetch(api_url, {
-  method: 'POST',
-  body: JSON.stringify(textToSend),
-  headers:{
-    'Content-Type': 'application/json'
-  } })
-.then(response => console.log(response.json()))
-.then(data => console.log(data));
+// let response = fetch(api_url);
+
+// if(response.ok){
+// 	alert("worksssssss");
+// } else {
+// 	alert("status: "+response.status);
+// }
+
+fetch(api_url)
+.then(response => {
+	// alert(response);
+	// console.log(response.json());
+	return response.json()
+	//return 'done1'
+})
+.then(res => {
+	console.log(res)
+})
+// .then(data => {
+// 	alert(data.json());
+// 	return 'done2'
+// });
 
 // let response = fetch(api_url, {
 //   method: 'POST',
