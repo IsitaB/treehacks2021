@@ -32,8 +32,8 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Number</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                      <p className="card-category">Your Total Carbon Footprint</p>
+                      <Card.Title as="h4">150</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -58,7 +58,7 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
+                      <p className="card-category">Donations</p>
                       <Card.Title as="h4">$ 1,345</Card.Title>
                     </div>
                   </Col>
@@ -84,7 +84,7 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
+                      <p className="card-category">Emissions prevented</p>
                       <Card.Title as="h4">23</Card.Title>
                     </div>
                   </Col>
@@ -110,7 +110,7 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
+                      <p className="card-category">Friends</p>
                       <Card.Title as="h4">+45K</Card.Title>
                     </div>
                   </Col>
@@ -130,22 +130,22 @@ function Dashboard() {
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Users Behavior</Card.Title>
-                <p className="card-category">24 Hours performance</p>
+                <Card.Title as="h4">Your Monthly Emissions</Card.Title>
+                {/* <p className="card-category">24 Hours performance</p> */}
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartHours">
                   <ChartistGraph
                     data={{
                       labels: [
-                        "9:00AM",
-                        "12:00AM",
-                        "3:00PM",
-                        "6:00PM",
-                        "9:00PM",
-                        "12:00PM",
-                        "3:00AM",
-                        "6:00AM",
+                        "Jan",
+                        "Feb",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
                       ],
                       series: [
                         [287, 385, 490, 492, 554, 586, 698, 695],
@@ -203,8 +203,8 @@ function Dashboard() {
           <Col md="4">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
-                <p className="card-category">Last Campaign Performance</p>
+                <Card.Title as="h4">Bought Material</Card.Title>
+                {/* <p className="card-category">Last Campaign Performance</p> */}
               </Card.Header>
               <Card.Body>
                 <div
@@ -221,9 +221,9 @@ function Dashboard() {
                 </div>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
+                  Cotton <i className="fas fa-circle text-danger"></i>
+                  Polyester <i className="fas fa-circle text-warning"></i>
+                  Wool
                 </div>
                 <hr></hr>
                 <div className="stats">
@@ -238,8 +238,8 @@ function Dashboard() {
           <Col md="6">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">2017 Sales</Card.Title>
-                <p className="card-category">All products including Taxes</p>
+                <Card.Title as="h4">Emissions vs Offset</Card.Title>
+                {/* <p className="card-category">All products including Taxes</p> */}
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartActivity">
@@ -328,7 +328,7 @@ function Dashboard() {
               </Card.Footer>
             </Card>
           </Col>
-          <Col md="6">
+          {/* <Col md="6">
             <Card className="card-tasks">
               <Card.Header>
                 <Card.Title as="h4">Tasks</Card.Title>
@@ -630,7 +630,7 @@ function Dashboard() {
                 </div>
               </Card.Footer>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </>
