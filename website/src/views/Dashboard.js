@@ -332,7 +332,43 @@ function Dashboard() {
               </Card.Footer>
             </Card>
           </Col>
+          <Col md="5">
+            <Card>
+              <Card.Header>
+                <Card.Title as="h4">Bought Material</Card.Title>
+                {/* <p className="card-category">Last Campaign Performance</p> */}
+              </Card.Header>
+              <Card.Body>
+                <div
+                  className="ct-chart ct-perfect-fourth"
+                  id="chartPreferences"
+                >
+                  <ChartistGraph
+                    data={{
+                      labels: ["40%", "20%", "40%"],
+                      series: [40, 20, 40],
+                    }}
+                    type="Pie"
+                  />
+                </div>
+                <div className="legend">
+                  <i className="fas fa-circle text-info"></i>
+                  Cotton <i className="fas fa-circle text-danger"></i>
+                  Polyester <i className="fas fa-circle text-warning"></i>
+                  Wool
+                </div>
+                <hr></hr>
+                <div className="stats">
+                  <i className="far fa-clock"></i>
+                  Campaign sent 2 days ago
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
+        {/* <Row>
+          
+        </Row> */}
       </Container>
     </>
   );
