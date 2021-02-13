@@ -9,7 +9,7 @@
 
 // capture all text
 let fabrics = document.getElementById("feature-bullets").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].innerText;
-let dims = document.getElementById("detailBullets_feature_div").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].innerText;
+let dims = document.getElementById("detailBullets_feature_div").getElementsByTagName("UL")[0].innerText;
 
 // summarize and send back
 const api_url = 'https://us-central1-test1-304600.cloudfunctions.net/test_firestore';

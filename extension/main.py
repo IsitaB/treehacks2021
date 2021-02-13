@@ -74,6 +74,7 @@ def generate_summary(request):
     request_json = request.get_json(silent=True)
     sentences =  read_article(request_json)
 
+<<<<<<< HEAD
     users_ref = db.collection(u'Textiles')
     docs = users_ref.stream()
 
@@ -81,6 +82,11 @@ def generate_summary(request):
         print(f'{doc.id} => {doc.to_dict()}')
   
 
+=======
+
+    ###
+    
+>>>>>>> the right text fields
     summary = summarize(sentences, ratio=0.3)
     summary_list = summary.split('.')
     for i, v in enumerate(summary_list):
