@@ -2,14 +2,14 @@
   "manifest_version": 2,
   "name": "Environmental ",
   "version": "0.1",
-  "permissions": ["activeTab", "https://us-central1-test1-304600.cloudfunctions.net/test_firestore"],
+  "permissions": [
+    "activeTab",
+    "https://us-central1-test1-304600.cloudfunctions.net/test_firestore"
+  ],
   "description": "idk man i just hope this works",
   "browser_action": {
-   "default_icon": "SJSUtreehacks.png",
-   "default_title": "Highlight the important stuff",
-   "default_popup": "popup.html"
-
- 
-   
+    "default_icon": "SJSUtreehacks.png",
+    "default_title": "Highlight the important stuff",
+    "default_popup": "popup.html"
   }
 }
