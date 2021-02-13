@@ -24,14 +24,20 @@ alert(textToSend);
 // 	alert("status: "+response.status);
 // }
 
-fetch(api_url)
+fetch(api_url, {
+  method: 'POST',
+  body: JSON.stringify(textToSend),
+  headers:{
+    'Content-Type': 'application/json'
+  } })
 .then(response => {
-	// alert(response);
+	alert("here1");
 	// console.log(response.json());
 	return response.json()
 	//return 'done1'
 })
 .then(res => {
+	alert("here2")
 	console.log(res)
 })
 // .then(data => {

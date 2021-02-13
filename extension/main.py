@@ -50,6 +50,10 @@ def read_article(file_json):
 
 
 def test_firestore(request):
+
+    r = request.get_json(silent=True)
+    # print(r)
+
     doc_ref = db.collection('Textiles').document('polyester')
 
     doc = doc_ref.get()
