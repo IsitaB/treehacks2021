@@ -41,17 +41,17 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/user",
-    name: "User Profile",
-    icon: "nc-icon nc-circle-09",
-    component: UserProfile,
-    layout: "/admin",
-  },
-  {
     path: "/table",
     name: "Table List",
     icon: "nc-icon nc-notes",
     component: TableList,
+    layout: "/admin",
+  },
+  {
+    path: "/user",
+    name: "User Profile",
+    icon: "nc-icon nc-circle-09",
+    component: UserProfile,
     layout: "/admin",
   },
   {
