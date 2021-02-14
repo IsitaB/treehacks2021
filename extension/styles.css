@@ -54,6 +54,10 @@ li a:hover {
   padding-left: 15px;
 }
 
+h4 {
+  display:inline;
+}
+
 
 h4, p {
   padding: 2px !important;
