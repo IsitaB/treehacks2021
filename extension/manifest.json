@@ -2,10 +2,6 @@
   "manifest_version": 2,
   "name": "Environmental ",
   "version": "0.1",
-  "background": {
-    "persistent": false,
-    "scripts": ["background.js"]
-  },
   "permissions": [
     "activeTab",
     "https://us-central1-test1-304600.cloudfunctions.net/test_firestore"

@@ -6,28 +6,22 @@ function summarize() {
 document.getElementById('clickme').addEventListener('click', summarize);
 
 const setDOMInfo = set => {
+	console.log(set)
+
 	let info = {carbon: '', water: '', land: '', methane:''};
 	console.log("please maam")
 
 	//TODO: fetch 
 
-  document.getElementById('carbon').textContent = info.carbon;
-  document.getElementById('water').textContent = info.water;
-  document.getElementById('land').textContent = info.land;
-	document.getElementById('methane').textContent = info.methane;
+
+  document.getElementById('carbon').textContent = set.CarbonEmission;
+  document.getElementById('water').textContent = set.WaterUsage;
+  document.getElementById('land').textContent = set.LandUsage;
+	document.getElementById('methane').textContent = set.MethaneEmission;
 };
 
 // Once the DOM is ready...
-window.addEventListener('DOMContentLoaded', () => {
-  // ...query for the active tab...
-  chrome.tabs.query({
-    active: true,
-    currentWindow: true
-  }, tabs => {
-    // ...and send a request for the DOM info...
-    chrome.tabs.sendMessage(
-        tabs[0].id,
-        {from: 'popup', subject: 'DOMInfo'},
-        setDOMInfo);
-  });
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+	console.log("in popup listener")
+	setDOMInfo(message);
 });

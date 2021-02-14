@@ -1,11 +1,3 @@
-// alert("Generating summary highlights. This may take up to 30 seconds depending on length of article.");
-
-// function unicodeToChar(text) {
-// 	return text.replace(/\\u[\dA-F]{4}/gi, 
-// 	      function (match) {
-// 	           return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
-// 	      });
-// }
 
 // capture all text
 let fabrics = document.getElementById("feature-bullets").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].innerText;
@@ -19,8 +11,6 @@ let pass = {
   dims
 }
 
-alert(JSON.stringify(pass))
-
 fetch(api_url, {
   method: 'POST',
   body: JSON.stringify(pass),
@@ -29,36 +19,46 @@ fetch(api_url, {
   }
 })
   .then(response => {
-    alert("here1");
-    // console.log(response.json());
+    // alert("here1");
+    
     return response.json()
     //return 'done1'
   })
   .then(res => {
-    alert("here2")
+    // alert("here2")
     console.log(res)
+    chrome.runtime.sendMessage(
+      res
+    );
   })
 
-  chrome.runtime.sendMessage({
-    from: 'content',
-    subject: 'showPageAction',
-  });
+
   
   // Listen for messages from the popup.
   chrome.runtime.onMessage.addListener((msg, sender, response) => {
     // First, validate the message's structure.
-    if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
-      // Collect the necessary data. 
-      // (For your specific requirements `document.querySelectorAll(...)`
-      //  should be equivalent to jquery's `$(...)`.)
-      var domInfo = {
-        total: document.querySelectorAll('*').length,
-        inputs: document.querySelectorAll('input').length,
-        buttons: document.querySelectorAll('button').length,
-      };
+    // if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
+    //   // Collect the necessary data. 
+    //   // (For your specific requirements `document.querySelectorAll(...)`
+    //   //  should be equivalent to jquery's `$(...)`.)
+    //   var domInfo = {
+    //     total: document.querySelectorAll('*').length,
+    //     inputs: document.querySelectorAll('input').length,
+    //     buttons: document.querySelectorAll('button').length,
+    //   };
   
-      // Directly respond to the sender (popup), 
-      // through the specified callback.
-      response(domInfo);
-    }
+    //   // Directly respond to the sender (popup), 
+    //   // through the specified callback.
+    //   response(domInfo);
+    // }
+    // chrome.tabs.query({
+    //   active: true,
+    //   currentWindow: true
+    // }, tabs => {
+    //   // ...and send a request for the DOM info...
+    //   chrome.tabs.sendMessage(
+    //       tabs[0].id,
+    //       {from: 'popup', subject: 'DOMInfo'},
+    //       setDOMInfo);
+    // });
   });
