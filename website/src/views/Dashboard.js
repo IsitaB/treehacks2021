@@ -228,43 +228,22 @@ function Dashboard() {
               </Card.Footer>
             </Card>
           </Col>
-          {/* <Col md="6">
+        </Row>
+        <Row>
+          <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
-                <p className="card-category">Last Campaign Performance</p>
+                <Card.Title as="h4">REDUCE YOUR CARBON FOOTPRINT</Card.Title>
+                <p className="card-category">Join the companies below in the footprint-reduction movement </p>
               </Card.Header>
               <Card.Body>
-                <div
-                  className="ct-chart ct-perfect-fourth"
-                  id="chartPreferences"
-                >
-                  <ChartistGraph
-                    data={{
-                      labels: ["40%", "20%", "40%"],
-                      series: [40, 20, 40],
-                    }}
-                    type="Pie"
-                  />
-                </div>
-                <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
-                </div>
-                <hr></hr>
-                <div className="stats">
-                  <i className="far fa-clock"></i>
-                  Campaign sent 2 days ago
-                </div>
+                <p><a href="https://hmgroup.com/sustainability/circular-and-climate-positive/recycling/">Visit H&M!</a></p>
+                <p><a href="https://www.thenorthface.com/about-us/responsibility/product/clothes-the-loop.html">Visit The North Face!</a></p>
+                <p><a href="https://www.patagonia.com/our-footprint/recycled-polyester.html">Visit Patagonia!</a></p>
               </Card.Body>
             </Card>
-          </Col> */}
+          </Col>
         </Row>
-        {/* <Row>
-
-        </Row> */}
       </Container>
     </>
   );
