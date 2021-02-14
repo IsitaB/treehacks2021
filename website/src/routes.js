@@ -54,13 +54,13 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin",
   },
-  {
-    path: "/maps",
-    name: "Maps",
-    icon: "nc-icon nc-pin-3",
-    component: Maps,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/maps",
+  //   name: "Maps",
+  //   icon: "nc-icon nc-pin-3",
+  //   component: Maps,
+  //   layout: "/admin",
+  // },
 ];
 
 export default dashboardRoutes;

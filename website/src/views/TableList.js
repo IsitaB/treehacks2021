@@ -43,7 +43,7 @@ function TableList() {
                 <Table className="table-hover table-striped">
                   <thead>
                     <tr>
-                      <th className="border-0">ID</th>
+                      <th className="border-0">Week</th>
                       <th className="border-0">Water waste</th>
                       <th className="border-0">CO2 Emission</th>
                       <th className="border-0">Land Use</th>
