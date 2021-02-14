@@ -74,7 +74,6 @@ def generate_summary(request):
     request_json = request.get_json(silent=True)
     sentences =  read_article(request_json)
 
-<<<<<<< HEAD
     users_ref = db.collection(u'Textiles')
     docs = users_ref.stream()
 
