@@ -81,12 +81,6 @@ def generate_summary(request):
     for doc in docs:
         print(f'{doc.id} => {doc.to_dict()}')
   
-
-=======
-
-    ###
-    
->>>>>>> the right text fields
     summary = summarize(sentences, ratio=0.3)
     summary_list = summary.split('.')
     for i, v in enumerate(summary_list):
