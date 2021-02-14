@@ -9,7 +9,20 @@
    "default_title": "Highlight the important stuff",
    "default_popup": "popup.html"
 
- 
-   
+
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
   }
+
+
+
 }
+
