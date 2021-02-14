@@ -17,21 +17,16 @@ const api_url = 'https://us-central1-test1-304600.cloudfunctions.net/test_firest
 let ig = JSON.stringify(fabrics)
 let wg = JSON.stringify(dims)
 
-let pass = ig + " splitter " + wg
+let pass = {
+  fabrics: ig,
+  dims: wg
+}
+
 alert(pass)
-// let hi = []
-
-// let response = fetch(api_url);
-
-// if(response.ok){
-// 	alert("worksssssss");
-// } else {
-// 	alert("status: "+response.status);
-// }
 
 fetch(api_url, {
   method: 'POST',
-  body: JSON.stringify(fabrics),
+  body: JSON.stringify(pass),
   headers: {
     'Content-Type': 'application/json'
   }
@@ -46,38 +41,3 @@ fetch(api_url, {
     alert("here2")
     console.log(res)
   })
-// .then(data => {
-// 	alert(data.json());
-// 	return 'done2'
-// });
-
-// let response = fetch(api_url, {
-//   method: 'POST',
-//   body: JSON.stringify(textToSend),
-//   headers:{
-//     'Content-Type': 'application/json'
-//   } });
-
-// if(response.ok){
-// 	alert("worksssssss");
-// } else {
-// 	alert("status: "+response.status);
-// }
-
-
-// fetch(api_url, {
-//   method: 'POST',
-//   body: JSON.stringify(textToSend),
-//   headers:{
-//     'Content-Type': 'application/json'
-//   } })
-// .then(data => { return data.json() })
-// .then(res => { 
-// 	$.each(res, function( index, value ) {
-// 		value = unicodeToChar(value).replace(/\\n/g, '');
-// 		document.body.innerHTML = document.body.innerHTML.split(value).join('<span style="background-color: #fff799;">' + value + '</span>');
-// 	});
-//  })
-// .catch(error => console.error('Error:', error));
-
-
