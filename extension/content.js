@@ -6,10 +6,11 @@ let dims = document.getElementById("detailBullets_feature_div").getElementsByTag
 // summarize and send back
 const api_url = 'https://us-central1-test1-304600.cloudfunctions.net/test_firestore';
 
-let pass = {
-  fabrics,
-  dims
-}
+let ig = JSON.stringify(fabrics);
+let wg = JSON.stringify(dims);
+
+let pass = ig + " splitter " + wg;
+alert("fetching product report")
 
 fetch(api_url, {
   method: 'POST',
