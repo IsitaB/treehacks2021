@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Environmental ",
+  "name": "Clothing Environmental Damage",
   "version": "0.1",
   "permissions": [
     "activeTab",
@@ -12,10 +12,24 @@
     "run_at": "document_idle",
     "all_frames": false
   }],
-  "description": "idk man i just hope this works",
+  "description": "Know your carbon footprint as you shop and find alternative soltutions to reduce it",
   "browser_action": {
-    "default_icon": "images/SJSUtreehacks.png",
-    "default_title": "Highlight the important stuff",
-    "default_popup": "popup.html"
+    "default_icon": "newFoot.png",
+    "default_popup": "popup.html",
+    "icons": [
+      {
+        "path": "C:\\Users\\monic\\treehacks2021\\extension\\babyFoot.png"
+      }
+  
+     ]
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
   }
 }
