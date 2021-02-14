@@ -5,10 +5,16 @@ function summarize() {
 }
 document.getElementById('clickme').addEventListener('click', summarize);
 
-const setDOMInfo = info => {
-  document.getElementById('total').textContent = info.total;
-  document.getElementById('inputs').textContent = info.inputs;
-  document.getElementById('buttons').textContent = info.buttons;
+const setDOMInfo = set => {
+	let info = {carbon: '', water: '', land: '', methane:''};
+	console.log("please maam")
+
+	//TODO: fetch 
+
+  document.getElementById('carbon').textContent = info.carbon;
+  document.getElementById('water').textContent = info.water;
+  document.getElementById('land').textContent = info.land;
+	document.getElementById('methane').textContent = info.methane;
 };
 
 // Once the DOM is ready...
@@ -22,8 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
     chrome.tabs.sendMessage(
         tabs[0].id,
         {from: 'popup', subject: 'DOMInfo'},
-        // ...also specifying a callback to be called 
-        //    from the receiving end (content script).
         setDOMInfo);
   });
 });
