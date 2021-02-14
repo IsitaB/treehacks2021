@@ -221,178 +221,29 @@ function Dashboard() {
                   WaterUsage
                 </div>
                 <hr></hr>
-                <div className="stats">
+                {/* <div className="stats">
                   <i className="fas fa-history"></i>
                   Updated 3 minutes ago
-                </div>
+                </div> */}
               </Card.Footer>
             </Card>
           </Col>
-          {/* <Col md="6">
-            <Card>
-              <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
-                <p className="card-category">Last Campaign Performance</p>
-              </Card.Header>
-              <Card.Body>
-                <div
-                  className="ct-chart ct-perfect-fourth"
-                  id="chartPreferences"
-                >
-                  <ChartistGraph
-                    data={{
-                      labels: ["40%", "20%", "40%"],
-                      series: [40, 20, 40],
-                    }}
-                    type="Pie"
-                  />
-                </div>
-                <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
-                </div>
-                <hr></hr>
-                <div className="stats">
-                  <i className="far fa-clock"></i>
-                  Campaign sent 2 days ago
-                </div>
-              </Card.Body>
-            </Card>
-          </Col> */}
         </Row>
         <Row>
           <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Enviromental Impact</Card.Title>
-                <p className="card-category">Last month performance</p>
+                <Card.Title as="h4">REDUCE YOUR CARBON FOOTPRINT</Card.Title>
+                <p className="card-category">Join the companies below in the footprint-reduction movement </p>
               </Card.Header>
               <Card.Body>
-                <div className="ct-chart" id="chartActivity">
-                  <ChartistGraph
-                    data={{
-                      labels: [
-                        "Jan",
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "Mai",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                        "Nov",
-                        "Dec",
-                      ],
-                      series: [
-                        [
-                          542,
-                          443,
-                          320,
-                          780,
-                          553,
-                          453,
-                          326,
-                          434,
-                          568,
-                          610,
-                          756,
-                          895,
-                        ],
-                        [
-                          412,
-                          243,
-                          280,
-                          580,
-                          453,
-                          353,
-                          300,
-                          364,
-                          368,
-                          410,
-                          636,
-                          695,
-                        ],
-                      ],
-                    }}
-                    type="Bar"
-                    options={{
-                      seriesBarDistance: 10,
-                      axisX: {
-                        showGrid: false,
-                      },
-                      height: "245px",
-                    }}
-                    responsiveOptions={[
-                      [
-                        "screen and (max-width: 640px)",
-                        {
-                          seriesBarDistance: 5,
-                          axisX: {
-                            labelInterpolationFnc: function (value) {
-                              return value[0];
-                            },
-                          },
-                        },
-                      ],
-                    ]}
-                  />
-                </div>
-              </Card.Body>
-              <Card.Footer>
-                <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Tesla Model S <i className="fas fa-circle text-danger"></i>
-                  BMW 5 Series
-                </div>
-                <hr></hr>
-                <div className="stats">
-                  <i className="fas fa-check"></i>
-                  Data information certified
-                </div>
-              </Card.Footer>
-            </Card>
-          </Col>
-          <Col md="5">
-            <Card>
-              <Card.Header>
-                <Card.Title as="h4">Bought Material</Card.Title>
-                {/* <p className="card-category">Last Campaign Performance</p> */}
-              </Card.Header>
-              <Card.Body>
-                <div
-                  className="ct-chart ct-perfect-fourth"
-                  id="chartPreferences"
-                >
-                  <ChartistGraph
-                    data={{
-                      labels: ["40%", "20%", "40%"],
-                      series: [40, 20, 40],
-                    }}
-                    type="Pie"
-                  />
-                </div>
-                <div className="legend">
-                  <i className="fas fa-circle text-info"></i>
-                  Cotton <i className="fas fa-circle text-danger"></i>
-                  Polyester <i className="fas fa-circle text-warning"></i>
-                  Wool
-                </div>
-                <hr></hr>
-                <div className="stats">
-                  <i className="far fa-clock"></i>
-                  Campaign sent 2 days ago
-                </div>
+                <p><a href="https://hmgroup.com/sustainability/circular-and-climate-positive/recycling/">Visit H&M!</a></p>
+                <p><a href="https://www.thenorthface.com/about-us/responsibility/product/clothes-the-loop.html">Visit The North Face!</a></p>
+                <p><a href="https://www.patagonia.com/our-footprint/recycled-polyester.html">Visit Patagonia!</a></p>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-        {/* <Row>
-
-        </Row> */}
       </Container>
     </>
   );

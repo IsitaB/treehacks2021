@@ -41,13 +41,6 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/user",
-    name: "User Profile",
-    icon: "nc-icon nc-circle-09",
-    component: UserProfile,
-    layout: "/admin",
-  },
-  {
     path: "/table",
     name: "Table List",
     icon: "nc-icon nc-notes",
@@ -55,12 +48,19 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/maps",
-    name: "Maps",
-    icon: "nc-icon nc-pin-3",
-    component: Maps,
+    path: "/user",
+    name: "User Profile",
+    icon: "nc-icon nc-circle-09",
+    component: UserProfile,
     layout: "/admin",
   },
+  // {
+  //   path: "/maps",
+  //   name: "Maps",
+  //   icon: "nc-icon nc-pin-3",
+  //   component: Maps,
+  //   layout: "/admin",
+  // },
 ];
 
 export default dashboardRoutes;

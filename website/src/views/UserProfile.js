@@ -30,7 +30,7 @@ function User() {
                       <Form.Group>
                         <label>Company (disabled)</label>
                         <Form.Control
-                          defaultValue="Creative Code Inc."
+                          defaultValue="SJSU"
                           disabled
                           placeholder="Company"
                           type="text"
@@ -41,7 +41,7 @@ function User() {
                       <Form.Group>
                         <label>Username</label>
                         <Form.Control
-                          defaultValue="michael23"
+                          defaultValue="alvinlinnn"
                           placeholder="Username"
                           type="text"
                         ></Form.Control>
@@ -64,7 +64,7 @@ function User() {
                       <Form.Group>
                         <label>First Name</label>
                         <Form.Control
-                          defaultValue="Mike"
+                          defaultValue="Alvin"
                           placeholder="Company"
                           type="text"
                         ></Form.Control>
@@ -74,7 +74,7 @@ function User() {
                       <Form.Group>
                         <label>Last Name</label>
                         <Form.Control
-                          defaultValue="Andrew"
+                          defaultValue="Lin"
                           placeholder="Last Name"
                           type="text"
                         ></Form.Control>
@@ -86,7 +86,7 @@ function User() {
                       <Form.Group>
                         <label>Address</label>
                         <Form.Control
-                          defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                          defaultValue="1 Washington Sq, San Jose, CA 95192, United States"
                           placeholder="Home Address"
                           type="text"
                         ></Form.Control>
@@ -98,7 +98,7 @@ function User() {
                       <Form.Group>
                         <label>City</label>
                         <Form.Control
-                          defaultValue="Mike"
+                          defaultValue="San Jose"
                           placeholder="City"
                           type="text"
                         ></Form.Control>
@@ -108,7 +108,7 @@ function User() {
                       <Form.Group>
                         <label>Country</label>
                         <Form.Control
-                          defaultValue="Andrew"
+                          defaultValue="United States"
                           placeholder="Country"
                           type="text"
                         ></Form.Control>
@@ -130,8 +130,7 @@ function User() {
                         <label>About Me</label>
                         <Form.Control
                           cols="80"
-                          defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in
-                          that two seat Lambo."
+                          defaultValue="I am a fun guy."
                           placeholder="Here can be your description"
                           rows="4"
                           as="textarea"
@@ -168,16 +167,15 @@ function User() {
                     <img
                       alt="..."
                       className="avatar border-gray"
-                      src={require("assets/img/faces/face-3.jpg").default}
+                      src={require("assets/img/faces/alvin.jpg").default}
                     ></img>
-                    <h5 className="title">Mike Andrew</h5>
+                    <h5 className="title">Alvin Lin</h5>
                   </a>
-                  <p className="description">michael24</p>
+                  <p className="description">alvinlinnn</p>
                 </div>
                 <p className="description text-center">
-                  "Lamborghini Mercy <br></br>
-                  Your chick she so thirsty <br></br>
-                  I'm in that two seat Lambo"
+                  I told you <br></br>
+                  I am a fun guy <br></br>
                 </p>
               </Card.Body>
               <hr></hr>
